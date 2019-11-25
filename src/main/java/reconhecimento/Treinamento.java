@@ -54,7 +54,7 @@ public class Treinamento {
 		
 		FaceRecognizer eigenfaces  = EigenFaceRecognizer.create();
 		FaceRecognizer fisherfaces = FisherFaceRecognizer.create();
-		FaceRecognizer lbph = LBPHFaceRecognizer.create();
+		FaceRecognizer lbph = LBPHFaceRecognizer.create(2,9,9,9,1);
 		
 		eigenfaces.train(fotos, rotulos);
 		eigenfaces.save("src\\recursos\\classificadorEigenFaces.yml");
